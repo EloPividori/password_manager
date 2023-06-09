@@ -4,12 +4,9 @@ class Password < ApplicationRecord
 
   # allows us to query encrypted usernames
   encrypts :username, deterministic: true
-
   encrypts :password
 
-  validates :url, presence: true
   validates :username, presence: true
+  validates :url, presence: true
   validates :password, presence: true
-
-  # coucou
 end
